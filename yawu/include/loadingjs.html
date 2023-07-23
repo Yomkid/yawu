@@ -1,0 +1,22 @@
+  <!-- <script src="assets/js/dashnav.js"></script> -->
+<script>
+    const navToggle = () => {
+        let menuIcon = document.querySelector(".nav-icon");
+        let sidebar = document.querySelector(".sidebar");
+
+        menuIcon.addEventListener("click", () => {
+            sidebar.classList.toggle("showSidebar");
+        })
+
+    }
+
+    navToggle();
+
+
+     // Simulate a loading delay
+setTimeout(function() {
+// Hide the loading container after some time (simulating data fetching, etc.)
+document.getElementById('loadingContainer').style.display = 'none';
+}, 3000); // Change the delay value as needed (in milliseconds)
+</script>
+<!-- <script src="assets/js/nav.js"></script> -->

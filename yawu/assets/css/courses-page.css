@@ -1,0 +1,369 @@
+
+
+body{
+    min-height: 100vh;
+}
+
+.sidebar{
+    width: 300px;
+    height: 100%;
+    background-color: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 50px rgba(202, 202, 202, 0.684);
+    z-index: 1;
+    position: fixed;
+    /* top: 5rem; */
+    top: 0;
+    left: 0;
+    padding-bottom: 1.5rem;
+    overflow: scroll;
+    transition: all 0.4s ease;
+}
+
+
+@media screen and (max-width:800px) {
+
+    .sidebar{
+        width: 100vw;
+        transform: translateX(-105vw);
+        /* top: 0; */
+    }
+
+    .showSidebar{
+        transform: translateX(0);
+    }
+
+} 
+
+.student-pic{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 2.5px solid var(--clr-green);
+    background-color: #ffffff00;
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.student-pic img{
+    width: 117px;
+    height: 117px;
+    border-radius: inherit;
+    object-fit: cover;
+}
+
+.student-name{
+    font-size: 1.25rem;
+}
+
+.main{
+    height: 100%;
+    padding-left: 300px;
+}
+
+.student-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.student-detail{
+    border-radius: 8px;
+    font-size: 14px;
+    width: 90%;
+    padding: 0.75rem;
+    transition: all 0.35s ease;
+}
+
+.student-detail:hover{
+    background-color: var(--clr-green);
+    color: var(--clr-white);
+    padding-left: 2rem;
+}
+
+#active{
+    background-color: var(--clr-green);
+    color: var(--clr-white);
+}
+
+.logout-border{
+    height: 1.75px;
+    width: 87%;
+    background-color: var(--grey-400);
+}
+
+.dashLogOut{
+    background-color: var(--clr-red);
+    color: var(--clr-white);
+    
+}
+
+.dashLogOut:hover{
+    background-color: var(--grey-700);
+}
+
+.main-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-red);
+    padding: 0.75rem 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+.main-footer p{
+    font-size: 14px;
+}
+
+.answer label{
+    font-size: 20px;
+}
+
+nav{
+    height: 7rem;
+    flex-direction: column;
+    position: sticky;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+.dashboard-nav-top{
+    justify-content: space-between;
+    background-color: var(--clr-green);
+    height: 4rem;
+}
+
+#dashNavContainer{
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+@media screen and (min-width:800px) {
+
+    #dashNavContainer{
+        justify-content: flex-end;
+    }
+}
+
+/* ========== Courses Bar ========== */
+
+.courses-bar{
+    height: 3rem;
+    background: var(--grey-700);
+}
+
+.courses-bar li{
+    height: 100%;
+    padding:  1.5rem;
+    cursor: pointer;
+}
+
+.courses-bar li:hover{
+    background: var(--clr-red);
+    transition: var(--transition-1);
+}
+
+@media screen and (max-width:800px) {
+
+    .fs-300{
+        font-size: 14px;
+    }
+
+    /* .courses-bar{
+        height: max-content;
+        flex-direction: column;
+    }
+
+    .courses-bar li{
+        width: 100%;
+    } */
+}
+
+.nav-logo{
+    padding: 1rem;
+}
+
+.nav-logo .logo{
+    height: 2rem;
+}
+
+.nav-student-pic{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2.5px solid var(--clr-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-student-pic img{
+    width: 40px;
+    height: 40px;
+    border-radius: inherit;
+    object-fit: cover;
+}
+
+a.nav-link{
+    color: white;
+}
+
+a.nav-link:hover{
+    color: rgb(255, 177, 177);
+}
+
+.nav-icon, .close-nav{
+    color: var(--clr-white);
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+.close-nav{
+    color: var(--clr-green);
+}
+
+.userNameImage{
+    align-self: flex-end;
+}
+
+@media screen and (max-width:800px) {
+
+    .nav-icon, .close-nav{
+        display: block;
+    }
+
+    .main{
+        padding-left: 0;
+    }
+
+    .access-cards{
+        grid-template-columns: repeat(auto-fill, 100%);
+    }
+
+    .access-cards{
+        width: 100%;
+    }
+
+
+}
+
+
+/* ========== Quick Accesses ========== */
+
+#quickAccesses{
+    min-height: calc(90vh - (4rem));
+}
+
+.widthMaintainer{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.access-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    height: max-content;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width:950px) {
+    .access-cards{
+        grid-template-columns: 1fr;
+    }
+}
+
+.access-card{
+    /* min-height: 150px; */
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.access-card:hover{
+    transition: all 0.4s ease;
+    box-shadow: 0px 0px 20px rgba(218, 218, 218, 0.684);
+}
+
+.access-card:nth-child(1){
+    background-color: rgb(215, 250, 248);
+}
+
+.access-card:nth-child(2){
+    background-color: rgb(248, 250, 215);
+}
+
+.access-card:nth-child(3){
+    background-color: rgb(215, 223, 250);
+}
+
+.access-card:nth-child(4){
+    background-color: rgb(250, 215, 235);
+}
+
+.access-card:nth-child(5){
+    background-color: rgb(242, 223, 255);
+}
+
+.access-card:nth-child(6){
+    background-color: rgb(226, 255, 217);
+}
+
+.access-header{
+    font-size: 2.5rem;
+}
+
+
+@media screen and (max-width:800px) {
+
+    .access-header{
+        font-size: 1.75rem;
+    }
+}
+
+.access-icon{
+    height: 70px;
+    width: 70px;
+    border-radius: 8px;
+    background-color: white;
+    margin: 0 auto;
+    box-shadow: 5px 3px 40px rgba(129, 129, 129, 0.596);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.access-icon img{
+    width: 50px;
+    height: 50px;
+}
+
+.accessBtn{
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--grey-700);
+}
+
+footer{
+    height: 4rem;
+}
+
+

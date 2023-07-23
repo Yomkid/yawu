@@ -1,0 +1,46 @@
+  <!-- <script src="assets/js/dashnav.js"></script> -->
+  <script>
+    const navToggle = () => {
+        let menuIcon = document.querySelector(".nav-icon");
+        let sidebar = document.querySelector(".sidebar");
+
+        menuIcon.addEventListener("click", () => {
+            sidebar.classList.toggle("showSidebar");
+        })
+
+    }
+
+    navToggle();
+
+
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     const cardContent = document.querySelector('.card-content');
+    //     const showMoreBtn = document.querySelector('.show-more-btn');
+    //     const showLessBtn = document.querySelector('.show-less-btn');
+
+    //     // Show the "Read More" button if the content exceeds the max-height
+    //     if (cardContent.scrollHeight > cardContent.clientHeight) {
+    //     showMoreBtn.style.display = 'block';
+    //     }
+
+    //     // Toggle the content visibility when clicking "Read More" or "Show Less" buttons
+    //     showMoreBtn.addEventListener('click', function() {
+    //     cardContent.style.maxHeight = 'none';
+    //     showMoreBtn.style.display = 'none';
+    //     showLessBtn.style.display = 'block';
+    //     });
+
+    //     showLessBtn.addEventListener('click', function() {
+    //     cardContent.style.maxHeight = '150px'; // Set the max height back to the initial value
+    //     showMoreBtn.style.display = 'block';
+    //     showLessBtn.style.display = 'none';
+    //     });
+    // });
+
+     // Simulate a loading delay
+setTimeout(function() {
+// Hide the loading container after some time (simulating data fetching, etc.)
+document.getElementById('loadingContainer').style.display = 'none';
+}, 3000); // Change the delay value as needed (in milliseconds)
+</script>
+<!-- <script src="assets/js/nav.js"></script> -->
